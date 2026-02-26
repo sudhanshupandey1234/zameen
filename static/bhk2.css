@@ -1,17 +1,14 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ============================= */
-/* 🌈 PREMIUM BODY BACKGROUND */
-/* ============================= */
+/* ================= BODY ================= */
 body {
     font-family: Arial, sans-serif;
 
-    /* layered modern gradient */
     background:
         radial-gradient(circle at 20% 20%, rgba(60,213,0,0.15), transparent 40%),
         radial-gradient(circle at 80% 30%, rgba(255,247,32,0.25), transparent 40%),
@@ -20,9 +17,7 @@ body {
     min-height: 100vh;
 }
 
-/* ============================= */
-/* 🖼 HERO — GLASS OVERLAY */
-/* ============================= */
+/* ================= HERO ================= */
 .hero {
     min-height: 24vh;
     width: 100%;
@@ -37,13 +32,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 20px;
     margin-bottom: 40px;
 }
 
-/* ============================= */
-/* 🔍 SEARCH BAR */
-/* ============================= */
+/* ================= SEARCH ================= */
 .herosearch {
     display: flex;
     justify-content: center;
@@ -63,8 +57,7 @@ body {
     text-align: center;
     padding: 0 18px;
 
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.95);
     box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
 
@@ -83,44 +76,47 @@ body {
 
 .searchbutton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-/* ============================= */
-/* 🧱 CARD GRID (WITHOUT HTML CHANGE) */
-/* ============================= */
-body > .box {
-    margin: 22px auto;
+/* ================= GRID WRAPPER ================= */
+/* ❗ IMPORTANT FIX */
+.base {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    padding: 20px;
 }
 
-/* cards */
+/* ================= CARD ================= */
 .box {
-    width: 92%;
-    max-width: 260px;
+    width: 100%;
+    max-width: 270px;
     border-radius: 18px;
     background: white;
     overflow: hidden;
-    margin: 22px auto;
     transition: 0.3s;
 
-    /* premium shadow */
+    margin: 0 auto;
+
     box-shadow:
-        0 6px 18px rgba(0,0,0,0.12),
+        0 8px 22px rgba(0,0,0,0.12),
         0 2px 6px rgba(0,0,0,0.08);
 }
 
 .box:hover {
-    transform: translateY(-8px) scale(1.04);
+    transform: translateY(-6px) scale(1.03);
     box-shadow:
-        0 16px 40px rgba(0,0,0,0.25),
-        0 6px 14px rgba(0,0,0,0.18);
+        0 18px 45px rgba(0,0,0,0.25);
 }
 
-/* ============================= */
-/* 🖼 IMAGE */
-/* ============================= */
+/* ================= IMAGE ================= */
 .im {
-    height: 170px;
+    height: 180px;
     width: 100%;
 }
 
@@ -128,20 +124,16 @@ body > .box {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
 }
 
-/* ============================= */
-/* 📝 TEXT */
-/* ============================= */
+/* ================= TEXT ================= */
 .tex {
-    padding: 14px;
+    padding: 15px;
 }
 
 .ta h2 {
     font-size: 18px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .ta h4 {
@@ -149,30 +141,25 @@ body > .box {
     font-weight: bold;
 }
 
-/* divider */
 hr {
-    background-color: #e5e5e5;
+    background-color: #e6e6e6;
     height: 1px;
     width: 70%;
     margin: 10px auto;
 }
 
-/* button area */
 .ba {
     display: flex;
     justify-content: center;
     margin-top: 10px;
 }
 
-/* ============================= */
-/* 🔘 PREMIUM BUTTON */
-/* ============================= */
+/* ================= BUTTON ================= */
 .bt {
-    padding: 9px 18px;
+    padding: 10px 20px;
     border-radius: 12px;
     border: none;
     font-weight: bold;
-    letter-spacing: 0.5px;
 
     background: linear-gradient(135deg, #fff720 10%, #3cd500 100%);
     cursor: pointer;
@@ -183,33 +170,7 @@ hr {
     transform: scale(1.08);
 }
 
-/* ============================= */
-/* 📱 RESPONSIVE GRID */
-/* ============================= */
-@media (min-width: 600px) {
-    body {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-
-    .hero {
-        grid-column: 1 / -1;
-    }
-}
-
-@media (min-width: 992px) {
-    body {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    body {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
+/* ================= MOBILE ================= */
 @media (max-width: 480px) {
     .searchbox,
     .searchbutton {
