@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/bookingconfirm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+
+<body>
+
+
+    {% include "header.html" %}
+    <div class="box">
+        <div class="booking-confirm-box">
+            <div class="booking-confirm d ">
+                <h1><i class="fa-solid fa-circle-check"></i>Booking Confirmed</h1>
+            </div>
+            <div class="booking-confirm d2">
+                <h3>Your room has been successfully booked.</h3>
+            </div>
+
+        </div>
+        <hr>
+        <div class="main-box">
+            <div class="booking-details">
+                <div class="bd">
+                    <h3>booking details</h3>
+                    <h4>Name: {{bookingd.name}}</h4>
+                    <h4>Room: {{room.Room_title}}</h4>
+                    <h4>Chech-in: {{bookingd.check_in_date}}</h4>
+                    <h4>booking-date:{{bookingd.created_at}}</h4>
+                    <h4>Total-rent: {{room.Room_rent}}</h4>
+                    
+
+                    <h4>Status: Booked</h4>
+                </div>
+
+            </div>
+            <div class="booking-image"><img src="{{ room.Room_images1.url}}" alt=" room image" height="200px"
+                    width="200px" class="room-image"></div>
+        </div>
+        <hr>
+        <div class="bottom">
+            <div class="goto"> My booking </div>
+            <div class="goto"><a href="{% url 'base' %}"> back to home </div>
+
+        </div>
+    </div>
+    {% include "footer.html"%}
+</body>
+
+</html>

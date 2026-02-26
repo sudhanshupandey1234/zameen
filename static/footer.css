@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(11, 5, 5);
+    color: aliceblue;
+    font-family: Roboto, Open Sans, Lato, Poppins, and Montserrat, Tahoma, sans-serif;
+    font-weight: bolder;
+    margin-top: 100px;
+
+}
+
+.block {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(30, 29, 29);
+}
+
+.f {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cnt {
+    margin-top: 60px;
+    margin-left: 100px;
+    font-weight: bolder;
+
+    display: block;
+
+    height: 150px;
+    width: 150px;
+
+
+}
+
+.c {
+    margin-left: 15px;
+}
+
+#a {
+    color: aliceblue;
+
+}
+
+.p {
+    font-size: larger;
+    margin-left: 15px;
+}
+
+.r {
+    margin-left: 10px;
+}
+
+.tr {
+    margin-left: 20px;
+}
+
+#h {
+    height: 2px;
+    width: 60%;
+    background-color: aliceblue;
+    margin-left: 20%;
+}
+
+.g {
+    height: 100px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(69, 128, 10);
+    position: relative;
+    top: 36.8px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+
+
+
+}
+
+.ic {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+
+
+#an {
+
+
+    font-size: 50px;
+    border-radius: 10px;
+
+
+}
+
+.ins {
+    margin-top: 20px;
+}
+
+#lin {
+    font-size: 50px;
+
+
+}
+
+.link {
+    margin-top: 20px;
+}
+
+.face {
+    font-size: 50px;
+
+    margin-top: 20px;
+}

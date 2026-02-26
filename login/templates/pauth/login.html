@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/login.css">
+    
+</head>
+
+<body>
+    <!-- main sare block bane h welcome login a -->
+    <main>
+        <!-- jo front me welcome dikh raha  -->
+        <div class="main">
+            <!-- welcome  -->
+            <div class="box1">
+                <div class="h1">
+                    <h1 class="h1text"> WELCOME TO HOUSIFY</h1>
+                    <h3 class="h1intext"> we help you in finding rooms </h3>
+                </div>
+            </div>
+            <!-- how it work section ye welcome ke sath ek hi div me h -->
+            <div class="how">
+                <h2> ---------HOW IT WORKS---------</h2>
+                <div class="c" id="csearch"> </div>
+                <div class="c" id="ccont"> </div>
+                <div class="c" id="cmove"> </div>
+            </div>
+        </div>
+
+
+        <!-- side  me jo login page h  -->
+        <div class="box2">
+            <!-- i2 me border diya h login box ko  -->
+            <div class="boxi2">
+                <div class="log"><a href="{% url 'registerv' %}"> Register</a>|</div>
+                
+                <form action="{% url 'loginv'%}" method="post">
+                    {% csrf_token %}
+                    <div id="user">
+                        <label for="{{form.username.id_for_label}}">User Name</label><br>
+                        <input type="text" placeholder="user name" name="{{form.username.name}}" value="{{ form.username.value}}">
+
+                    </div>
+                    
+                    <div id="pass" >
+                        <label for="{{form.password.id_for_label}}">Password</label><br>
+                        <input type="Password" placeholder="Password"  name="{{form.password.name}}" value="{{ form.password.value}}">
+
+                    </div>
+                    {% if error %}
+                        <p>{{ error}}</p>
+                    {% endif %}
+                    <div class="but">
+                        <button type="submit" id="but">  submit</button>
+                    </div>
+
+
+
+
+                </form>
+              
+
+
+
+                
+            
+            </div>
+        </div>
+    </main>
+    <script src="login.js"></script>
+</body>
+
+
+
+</html>

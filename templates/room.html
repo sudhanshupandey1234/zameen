@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/room.css">
+    <link rel="stylesheet" href="/static/roommedia.css">
+</head>
+
+<body>
+    <main class="mai">
+        
+        
+
+    {% include "header.html" %}
+        
+        
+         <!-- ye pura page h imge plus side detail block  -->
+        <div class="dpage">
+            <!-- image plus details h imgsec me  -->
+            <div class="imgsec">
+                <!-- kewal images h isme  -->
+                <div class="im">
+                     <div class="imc">
+                        {% for img in images %}
+                            {% if img %}
+                            <img src="{{ img.url}}" alt="image"  height=" 250px" width="100%" class="room-img"> 
+                            {% endif %}
+                        {% endfor %}
+                     </div>
+                </div>
+                <!-- details  -->
+                <div class="det">
+                    <!-- room details  -->
+                    <div class="rd"> 
+                        <div class="rdd t"><h2>{{room.Room_title}}</h2></div>
+                        <div class="rdd ty"> Room Type : {{room.Room_type}}</div>
+                        <div class="rdd">{{room.Room_location}}</div>
+                    </div>
+                    
+                    <!-- ammenties -->
+                    <div class="am"> 
+                        <div class="amd"><h3> Room rent: {{room.Room_rent}} / Month</h3></div>
+                        <div class="amd"><h4>   Security Charge : {{room.Room_security}}</h4></div>
+                        <div class="amd">{{room.Room_availability}}</div>
+                    </div>
+                </div>
+            </div>
+            <!-- dealer details ke liye section images ke side me  -->
+            <div class="dealer">
+                <!-- dealer ke andar 3 section rate + location and facilities and contact  -->
+                <div class="rl">
+                    <H1 class="rh" id="r">{{room.Room_rent}}</H1>
+                    <h2 class="rh"> location </h2>
+                    <h2 class="rh"> landmark  </h2>
+                    <h2 class="rh"> refrence </h2>
+                </div>
+                <div class="fac">
+                    <h3 id="rd"> Wifi:
+                            {% if room.wifi %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd"> Bed:
+                            {% if room.bed %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd"> Chair:
+                            {% if room.chair %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd">Table:
+                            {% if room.table %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd">Mattress:
+                            {% if room.mattres %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd">Fan:
+                            {% if room.fan %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd">Ac:
+                            {% if room.Ac %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    <h3 id="rd">RO:
+                            {% if room.ro %}
+                                <span style="color:green;">✔</span>
+                            {% else %}
+                                <span style="color:red;">✖</span>
+                            {% endif %}</h3>
+                    
+                     
+
+
+                </div>
+                <div class="con">
+                    <buttton id="cb">
+                        <a href="https://wa.me/918303970186?text=Hello%20I%20want%20to%20contact%20you"
+                            target="_blank" class="boat">
+                                💬 Chat 
+                        </a>
+                    </buttton>
+                     <buttton id="cb">
+                        <a href="{% url 'bookingform'  room.id %}"> 
+                        Book Now</buttton> 
+                </div>
+
+            </div>
+
+        </div>
+         
+        {% include 'more.html' %}
+    </main>
+     
+        {% include "footer.html" %} 
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+ {% include "header.html" %}
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/bhk2.css">
+    <link rel="stylesheet" href="indexmedia.css">
+</head> 
+<body>
+    <!-- image section -->
+        <div class="hero">
+            <div class="herosearch">
+                <input type="search" placeholder="search here" class="searchbox"><button class="searchbutton">
+                    search</button>
+            </div>
+
+        </div>
+        {% for m in listingdata %}
+            <div class="box o ">
+                <div class="im" id="i11"> <img src="{{m.Room_images.url}}" alt="image"  height="100%" width="250px" class="room-img"></div>
+                <div class="tex" id="t11">
+                    <!-- ta means text area isme sara text kardiya  -->
+                    <div class="ta">
+                        <h2>{{m.Room_title}}</h2>
+                        <h4>{{ m.Room_rent}}</h4>
+                    </div>
+                    <hr>
+                    <!-- button ara -->
+                    <div class="ba"><a href="{% url 'room' m.id %}">  <button class="bt" id="bt11"> VIEW DETAILS</button></a>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+
+</body>
+</html>
+ 
+ {% include "footer.html" %}

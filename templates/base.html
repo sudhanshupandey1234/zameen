@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet" href="/static/basemedia.css">
+</head>
+
+<body>
+    {% include "header.html" %}
+    <!-- image section -->
+    <div class="hero">
+        <div class="herosearch">
+            <form method="get" action="{% url 'base'%}">
+                <input type="search" name="search" placeholder="search here" class="searchbox"><button class="searchbutton">
+                    search</button>
+                </form>
+        </div>
+
+    </div>
+    <div class="base">
+
+
+        {% for n in listingdata %}
+        <div class="box o ">
+            <div class="im" id="i11"><img src="{{n.Room_images1.url}}" alt="image" height="100%" width="250px"
+                    class="room-img">
+                </div>
+            <div class="tex" id="t11">
+                <!-- ta means text area isme sara text kardiya  -->
+                <div class="ta">
+                    <h2>{{n.Room_title}}</h2>
+                    <h4> {{n.Room_rent}} </h4>
+
+                </div>
+                <hr>
+                <!-- button ara -->
+                <div class="ba"> <a href="{% url 'room' n.id %}"> <button class="bt" id="bt11"> VIEW
+                            DETAILS </a> </button>
+                </div>
+            </div>
+
+
+        </div>
+        {% endfor %}
+
+    </div>
+
+
+    {% include "footer.html" %}
+
+</body>
+
+</html>

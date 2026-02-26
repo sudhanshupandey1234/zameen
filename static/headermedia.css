@@ -1,0 +1,46 @@
+@media (max-width:700px) {
+    .navitems {
+        display: none;
+    }
+
+    .navlogo {
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100vw;
+    }
+
+    .navbar2 {
+        width: 100vw;
+    }
+
+    .border {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:700px) and (max-width:1000px) {
+    .navlogo {
+        width: 30%;
+    }
+
+    .navitems {
+        width: 60%;
+    }
+
+    .navaccount {
+        width: auto;
+    }
+
+    .bt {
+        width: 100px;
+    }
+
+    .navaccount {
+        display: none;
+    }
+
+
+
+}

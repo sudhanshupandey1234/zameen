@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.myb {
+    height: 350px;
+    width: 40%;
+
+    margin-left: 7%;
+    border: 2px solid rgb(3, 3, 123);
+    border-radius: 15px;
+    margin-top: 50px;
+
+}
+
+.myba {
+    border-top: 2px solid rgb(11, 11, 173);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(82, 154, 10);
+    height: 19.5%;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* container of mybi and mybt */
+.mybb {
+    height: 80%;
+    width: 100%;
+
+    border-top-right-radius: 14px;
+    border-top-left-radius: 14px;
+    display: flex;
+
+}
+
+.mybi {
+    height: 100%;
+    width: 40%;
+
+    border-top-left-radius: 14px;
+}
+
+/* container of mybt and mybtd */
+.mybt {
+    height: 100%;
+    width: 60%;
+
+    border-top-right-radius: 14px;
+
+
+}
+
+.mybth {
+    height: 20%;
+    width: 100%;
+
+    border-top-right-radius: 14px;
+    border-bottom: 2px solid rgb(4, 4, 144);
+    text-align: center;
+
+
+
+
+
+}
+
+.mybthb {
+
+
+
+    margin-left: 10%;
+    padding-top: 10px;
+    font-size: 5vmin;
+}
+
+.mybtdb {
+    height: 185px;
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    overflow: scroll;
+
+
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+.your {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.mybab {
+    margin-left: 30;
+    padding-top: .5%;
+    font-size: 5vmin;
+}
+
+.mb-img {
+    border-top-left-radius: 10px;
+}

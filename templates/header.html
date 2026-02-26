@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/header.css">
+    <link rel="stylesheet" href="/static/headermedia.css">
+</head>
+
+<body>
+    <header>
+        <!-- sabse upar nav bar buy sell contact -->
+        <div class=" navbar">
+            <div class="navlogo">
+                <h1 id="navlogo"> HOUSIFY</h1>
+            </div>
+            <div class="navitems">
+                <div class="navbuy border"><a href="/"> Home</a></div>
+                <div class="navsell border"><a href="/mybooking">My booking</a></div>
+                <div class="navaccount border" ><a href="/About-Us">About Us </a></div>
+            </div>
+        </div>
+        <!-- chota nav bar 2bhk three bhk -->
+        <div class="navbar2">
+           <div class="navitems2">
+                <div class="2bhk bor" class="{% if request.path == '/2bhk' %}active{% endif %}"> <a href="/2bhk">2BHK</a></div>
+                <div class="3bhk bor" class="{% if request.path == '/3bhk' %}active{% endif %}"><a href="/3bhk">3BHK</a></div>
+                <div class="pg bor" class="{% if request.path == '/pg' %}active{% endif %}"><a href="/pg">PG</a></div>
+                
+            </div>
+        </div>
+    </header>
+

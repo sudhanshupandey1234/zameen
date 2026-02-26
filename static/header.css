@@ -1,0 +1,125 @@
+ * {
+     margin: 0;
+     padding: 0;
+
+ }
+
+ a {
+     color: aliceblue;
+     text-decoration: none;
+ }
+
+ main {
+     height: 1000px;
+ }
+
+ /* sabse upar ka navbar h */
+ .navbar {
+     background-color: #2E69A8;
+     height: 10vh;
+     width: 100%;
+     display: flex;
+     position: fixed;
+     top: 0px;
+
+
+     z-index: 4;
+
+ }
+
+ /* nav1  ke items  */
+ .navitems {
+     display: flex;
+     height: 10vh;
+     width: 80%;
+     justify-content: space-evenly;
+     align-items: center;
+     flex-wrap: wrap;
+
+ }
+
+ /* .navsell {
+    height: 6vh;
+    padding-bottom: 2px;
+} */
+
+
+
+
+ .border {
+     height: 5vh;
+     width: 15vw;
+     font-size: 2vw;
+     background-color: #2E69A8;
+
+     border: 1px solid #2E69A8;
+     padding-left: 5px;
+
+     padding-left: 5px;
+     color: aliceblue;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+ }
+
+ .active {
+     background-color: rgb(74, 138, 10);
+ }
+
+
+
+ .border:hover {
+     border-color: azure;
+     background-color: #2E69A8;
+     transform: scale(1.05);
+     box-shadow: 4px 4px 4px #024183;
+ }
+
+ .navlogo {
+     width: 14vw;
+     background-color: #2E69A8;
+     padding-left: 5px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: rgb(107, 193, 22);
+
+ }
+
+ .navbar2 {
+     padding-top: 10vh;
+ }
+
+ .navitems2 {
+     height: 5vh;
+     width: 100%;
+     background-color: #024183;
+
+     font-weight: bolder;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     color: aliceblue;
+
+ }
+
+ .bor {
+     width: 60px;
+     display: flex;
+     justify-content: center;
+
+ }
+
+ .bor:hover {
+     border-radius: 4px;
+     box-shadow: 2px 2px 2px rgb(163, 210, 228);
+     transform: scale(1.25);
+     /* padding-left: 5px;
+    padding-right: 5PX; */
+     background: linear-gradient(to right, lightblue, darkblue);
+
+
+
+ }

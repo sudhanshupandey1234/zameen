@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/mybooking.css">
+</head>
+
+<body>
+{% include 'header.html' %}
+    <div class="your">
+        <div class="yourbookin">
+            <h1>My Bookings</h1>
+        </div>
+
+    </div>
+    <!-- pura block h with amounnt  -->
+{% if bookings %}
+    {% for booking in bookings %}
+        <div class="myb">
+        <!-- isme image or details h -->
+            <div class="mybb">
+                <div class="mybi"><img src="{{booking.listings.Room_images1.url}}" height="200px" width="200px" class="mb-img"></div>
+                <div class="mybt">
+                    <div class="mybth">
+                        <div class="mybthb">{{ booking.listings.Room_title}}</div>
+                     
+                    </div>
+                    <div class="mybtd"> 
+                        <div class="mybtdb">₹{{ booking.listings.Room_rent }}di amn suryansh  as hshukla from chsndigarh fhskgfshgfgshghghghchshghghdghsghjdjsgyetryhewfhbhdsvchgsgbdbhjbhveghdvhcbdvhksvgavhgsgvhvdhbvhgvfghvhgdhsvghvgvsdgcsbdhghgfbsdbcvhvsdghvgvc bdvsgvdhgcbsdbhjvdgfwgfeuieyurehebueeyhbfjfuiuefgwehbfhjchigywggfvqjhehygfggqhyuegfyubhudg fegfb  uygf wegwefehuhfef ueiyfe fe uyiubnc uewiy w uiwhy wefwiuuiyr  fwiuweui fweuwh</div>
+                    </div>
+                </div>
+            </div>
+        <!-- amount section -->
+            <div class="myba">
+                <div class="mybab">Total Amount: ₹{{booking.listings.Room_rent}} </div>
+                </div>
+        </div>
+    {% endfor %}
+{% else %}
+    <p>No bookings found</p>
+{% endif %}
+    {% include 'more.html' %}
+{% include 'footer.html' %}
+
+</body>
+
+</html>
