@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.page-wrapper {
+    min-height: calc(100vh - 120px);
+    /* header + footer height adjust */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Main Container */
+.booking-container {
+    background: #fff;
+    width: 420px;
+    height: 700px;
+
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.form-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Form */
+.booking-form .form-group {
+    margin-bottom: 15px;
+}
+
+.booking-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #444;
+}
+
+.booking-form input,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Checkbox */
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+/* Button */
+.btn-confirm {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: #667eea;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-confirm:hover {
+    background: #5a67d8;
+}
