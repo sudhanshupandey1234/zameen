@@ -1,165 +1,130 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: #FFF720;
-}
-
-/* ✅ HERO */
-.hero {
-    min-height: 20vh;
-    width: 100%;
-    background-color: aqua;
-    background-image: url(/static/image/search3.jpg);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
-    padding: 20px;
-}
-
-/* ✅ SEARCH */
-.herosearch {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.searchbox {
-    height: 50px;
-    width: 60%;
-    max-width: 500px;
-    font-size: 16px;
-    border: 1px solid;
-    border-radius: 25px;
-    text-align: center;
-    margin-right: 10px;
-    opacity: .9;
-    background-color: rgba(79, 143, 14, .25);
-}
-
-.searchbutton {
-    height: 50px;
-    width: 120px;
-    border-radius: 25px;
-    opacity: .9;
-    color: white;
-    background-color: rgb(79, 143, 14);
-    border: none;
-    cursor: pointer;
-}
-
-/* ✅ GRID */
-.base {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    padding: 20px;
-    justify-items: center;
-}
-
-/* ✅ CARD */
+/* Main Box */
 .box {
-    width: 100%;
-    max-width: 260px;
-    border: 2px solid rgb(15, 15, 115);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: 0.3s;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    border: 1px solid black;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding-bottom: 20px;
 }
 
-.box:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 10px rgb(71, 71, 156);
+/* Booking Confirm Section */
+.booking-confirm-box {
+    padding: 20px 0;
 }
 
-/* ✅ IMAGE */
-.im {
-    height: 160px;
-    width: 100%;
+.d2 {
+    color: rgb(105, 201, 9);
 }
 
-.room-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ✅ TEXT */
-.tex {
-    padding: 10px;
-}
-
-.ta {
-    margin-left: 5px;
-}
-
-.ba {
+.booking-confirm {
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+/* Main Content */
+.main-box {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Left Side */
+.booking-details {
+    flex: 1;
+}
+
+.bd {
     margin-top: 10px;
 }
 
-.bt {
-    padding: 8px 14px;
-    border-radius: 8px;
-    border: none;
-    background-image: linear-gradient(135deg, #FFF720 10%, #3CD500 100%);
-    cursor: pointer;
-    transition: 0.2s;
+h4 {
+    margin-top: 8px;
 }
 
-.bt:hover {
-    transform: scale(1.1);
+/* Right Side Image */
+.booking-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Bottom Buttons */
+.bottom {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.goto {
+    flex: 1;
+    min-width: 120px;
+    height: 40px;
+    background-color: rgb(94, 181, 6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.goto a {
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.goto:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 6px black;
 }
 
 hr {
-    background-color: black;
     height: 2px;
-    width: 60%;
-    margin: 5px auto;
+    background-color: black;
+    width: 80%;
+    margin: 20px auto;
 }
 
-/* ================================= */
-/* 📱 MOBILE RESPONSIVE */
-/* ================================= */
-
-@media (max-width: 1024px) {
-    .base {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
+/* 📱 Mobile Responsive */
 @media (max-width: 768px) {
-    .base {
-        grid-template-columns: repeat(2, 1fr);
+
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .searchbox {
-        width: 65%;
-    }
-}
-
-@media (max-width: 480px) {
-    .base {
-        grid-template-columns: 1fr;
+    .booking-image {
+        margin-top: 15px;
     }
 
-    .hero {
-        min-height: 15vh;
+    .room-image {
+        max-width: 250px;
     }
 
-    .searchbox {
-        width: 60%;
-        font-size: 14px;
-    }
-
-    .searchbutton {
-        width: 100px;
+    .goto {
+        width: 100%;
     }
 }
