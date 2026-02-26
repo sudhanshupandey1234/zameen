@@ -1,130 +1,218 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
 }
 
+/* ============================= */
+/* 🌈 PREMIUM BODY BACKGROUND */
+/* ============================= */
+body {
+    font-family: Arial, sans-serif;
+
+    /* layered modern gradient */
+    background:
+        radial-gradient(circle at 20% 20%, rgba(60,213,0,0.15), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(255,247,32,0.25), transparent 40%),
+        linear-gradient(135deg, #f6f9ff 0%, #fff720 100%);
+
+    min-height: 100vh;
+}
+
+/* ============================= */
+/* 🖼 HERO — GLASS OVERLAY */
+/* ============================= */
 .hero {
-    height: 20vh;
+    min-height: 24vh;
     width: 100%;
-    background-color: aqua;
-    background-image: url(/static/image/search3.jpg);
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url(/static/image/search3.jpg);
+
     background-size: cover;
+    background-position: center;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: -5;
-    margin-bottom: 100px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
 
+/* ============================= */
+/* 🔍 SEARCH BAR */
+/* ============================= */
+.herosearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
 
 .searchbox {
-    height: 8vh;
+    height: 52px;
     width: 60%;
-    font-size: 5vmin;
-    border: 1px solid;
-    border-radius: 25px;
+    max-width: 520px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
     text-align: center;
-    margin-right: 20px;
-    opacity: .75;
-    background-color: rgb(79, 143, 14, .25);
-    color: black;
+    padding: 0 18px;
 
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
-
-input::placeholder {
-    color: whitesmoke;
-    font-style: italic;
-}
-
 
 .searchbutton {
-    height: 8vh;
-    width: 20%;
-    border-radius: 25%;
-    position: relative;
-    bottom: 8px;
-    opacity: .75;
+    height: 52px;
+    width: 130px;
+    border-radius: 30px;
+    border: none;
     color: white;
-    background-color: rgb(79, 143, 14);
+    font-weight: bold;
+
+    background: linear-gradient(135deg, #3cd500, #2a9d00);
+    cursor: pointer;
+    transition: 0.25s;
 }
 
-.base {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: auto;
-
-    gap: 50px;
-
+.searchbutton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
+/* ============================= */
+/* 🧱 CARD GRID (WITHOUT HTML CHANGE) */
+/* ============================= */
+body > .box {
+    margin: 22px auto;
+}
 
+/* cards */
 .box {
-    height: 250px;
-    width: 250px;
+    width: 92%;
+    max-width: 260px;
+    border-radius: 18px;
+    background: white;
+    overflow: hidden;
+    margin: 22px auto;
+    transition: 0.3s;
 
-    border: 2px solid rgb(15, 15, 115);
-    border-radius: 15px;
-    margin-top: 100px;
-    background-color: #FFF720;
-    margin-bottom: 50px;
-    margin-left: 50px;
-
-
+    /* premium shadow */
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.12),
+        0 2px 6px rgba(0,0,0,0.08);
 }
 
+.box:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow:
+        0 16px 40px rgba(0,0,0,0.25),
+        0 6px 14px rgba(0,0,0,0.18);
+}
+
+/* ============================= */
+/* 🖼 IMAGE */
+/* ============================= */
 .im {
-    height: 60%;
+    height: 170px;
     width: 100%;
-
-    border-top-left-radius: 13px;
-    border-top-right-radius: 13px;
 }
 
+.room-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+}
+
+/* ============================= */
+/* 📝 TEXT */
+/* ============================= */
 .tex {
-    height: 40%;
-    width: 100%;
-
-    border-radius: 13px;
+    padding: 14px;
 }
 
-.ta {
-    height: 60%;
-    width: 100%;
-    margin-left: 10px;
+.ta h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
 }
 
+.ta h4 {
+    color: #2a9d00;
+    font-weight: bold;
+}
+
+/* divider */
+hr {
+    background-color: #e5e5e5;
+    height: 1px;
+    width: 70%;
+    margin: 10px auto;
+}
+
+/* button area */
 .ba {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
 }
 
-hr {
-    background-color: black;
-    height: 2px;
-    width: 60%;
-    margin-left: 50px;
-}
-
-.box:hover {
-    transform: scale(1.1);
-    box-shadow: 4px 4px 4px rgb(71, 71, 156);
-}
-
+/* ============================= */
+/* 🔘 PREMIUM BUTTON */
+/* ============================= */
 .bt {
+    padding: 9px 18px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 
-    background-image: linear-gradient(135deg, #FFF720 10%, #3CD500 100%);
+    background: linear-gradient(135deg, #fff720 10%, #3cd500 100%);
+    cursor: pointer;
+    transition: 0.25s;
 }
 
 .bt:hover {
-    transform: scale(1.15);
+    transform: scale(1.08);
 }
 
-.room-img {
-    border-top-right-radius: 13px;
-    border-top-left-radius: 13px;
+/* ============================= */
+/* 📱 RESPONSIVE GRID */
+/* ============================= */
+@media (min-width: 600px) {
+    body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
 
+    .hero {
+        grid-column: 1 / -1;
+    }
+}
 
+@media (min-width: 992px) {
+    body {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .searchbox,
+    .searchbutton {
+        width: 100%;
+    }
 }
