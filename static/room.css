@@ -11,6 +11,7 @@ body {
         radial-gradient(circle at 20% 20%, rgba(60,213,0,0.12), transparent 40%),
         radial-gradient(circle at 80% 30%, rgba(255,247,32,0.22), transparent 40%),
         linear-gradient(135deg, #f6f9ff 0%, #fff720 100%);
+    
 }
 
 /* ================= MAIN ================= */
@@ -161,4 +162,23 @@ body {
         max-width: 220px;
         height: 160px;
     }
+/* ===== PAGE HEIGHT FIX ===== */
+html, body {
+    min-height: 100%;
+}
+
+.mai {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* content stretch kare */
+.dpage {
+    flex: 1;
+}
+
+/* footer always bottom */
+footer {
+    margin-top: auto;
 }
